@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+.pink {
+    color:pink;
+}
+.blue {
+    color:rgb(156, 222, 248);
+}
+.user {
+    color:rgb(19, 236, 243);
+    font-size:small;
+}
+.chat {
+    color:pink;
+    font-size:small;
+}
+#scam {
+    border-radius:  20px;
+    font-weight:bold;
+    background-color:rgb(224, 148, 148);
+}
+#chatlog {
+    background-color: black;
+}
