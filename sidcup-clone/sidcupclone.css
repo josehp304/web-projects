@@ -40,6 +40,7 @@ body {
   border-radius: 50%;
   position: fixed;
   z-index: 99;
+  transition: all linear 0.1s;
 }
 .cursor-blur {
   height: 400px;
@@ -49,6 +50,7 @@ body {
   filter: blur(100px);
   position: fixed;
   z-index: 9;
+  transition: all linear 0.4s;
 }
 
 video {
@@ -86,14 +88,14 @@ video {
   top: -6px;
   left: -6px;
   z-index: -1;
-  font-size: 130px;
+  font-size: 160px;
   font-weight: bold;
   -webkit-text-stroke: 0.1px #95c11e;
   -webkit-text-fill-color: black;
 }
 .title1 h1 {
   z-index: 999;
-  font-size: 130px;
+  font-size: 160px;
   font-weight: bold;
 }
 
@@ -287,6 +289,7 @@ video {
 }
 .content3 {
   width: 50%;
+  margin-right: 200px;
 }
 .content3 h1 {
   text-align: center;
@@ -297,7 +300,7 @@ video {
 /* quotes */
 .quotes {
   position: relative;
-  height: 70vh;
+  height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -321,4 +324,96 @@ video {
   width: 60%;
   text-align: center;
   margin: 0 auto;
+}
+/* what are you waiting for section */
+.waiting_container {
+  /* position: relative; */
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10% 0%; */
+  gap: 20px;
+  /* background-color: red; */
+}
+
+.cardw {
+  position: relative;
+  height: 43%;
+  width: 28%;
+  border-radius: 20px;
+  /* padding-bottom: 10%; */
+  overflow: hidden;
+}
+
+.cardw img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: all ease 0.5s;
+}
+.cardw h4 {
+  position: absolute;
+  z-index: 10;
+  font-size: 35px;
+  top: 30%;
+  left: 10%;
+  font-weight: 900;
+}
+.overlayw {
+  /* position: relative; */
+  background-color: #95c11e;
+  height: 110%;
+  width: 100%;
+  z-index: 10;
+  display: block;
+}
+
+.cardw:hover .overlayw {
+  display: none;
+  transition: all ease 0.5s;
+}
+
+.cardw:hover img {
+  transform: scale(1);
+}
+.waiting {
+  position: relative;
+}
+.waiting h1 {
+  position: absolute;
+  color: black;
+  font-size: 100px;
+  -webkit-text-stroke: 1px white;
+  top: 10%;
+}
+
+.waiting:hover h1 {
+  -webkit-text-stroke: 1px #42a62e;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #42a62e, #95c11e);
+  z-index: 10;
+}
+.footer #hfimg {
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+#fimg {
+  height: 90%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+.hgimgc:hover #hfimg {
+  height: 70px;
 }
