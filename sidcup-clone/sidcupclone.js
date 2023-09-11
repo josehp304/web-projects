@@ -1,8 +1,8 @@
 var crsr = document.querySelector(".cursor");
 var crsrb = document.querySelector(".cursor-blur");
 document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + 10 + "px";
-  crsr.style.top = dets.y + 10 + "px";
+  crsr.style.left = dets.x + 30 + "px";
+  crsr.style.top = dets.y + 30 + "px";
   crsrb.style.left = dets.x - 200 + "px";
   crsrb.style.top = dets.y - 200 + "px";
 });

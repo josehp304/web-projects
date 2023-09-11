@@ -9,6 +9,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -88,14 +89,14 @@ video {
   top: -6px;
   left: -6px;
   z-index: -1;
-  font-size: 160px;
+  font-size: 8vmax;
   font-weight: bold;
   -webkit-text-stroke: 0.1px #95c11e;
   -webkit-text-fill-color: black;
 }
 .title1 h1 {
   z-index: 999;
-  font-size: 160px;
+  font-size: 8vmax;
   font-weight: bold;
 }
 
@@ -110,6 +111,28 @@ video {
   font-weight: 100;
   width: 40%;
   text-align: center;
+}
+.page1 .arrow {
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #95c11e;
+  position: absolute;
+  left: -2%;
+  bottom: 0%;
+  transition: all linear 0.2s;
+}
+.arrow i {
+  font-size: 90px;
+  /* font-weight: 900; */
+}
+.arrow:hover {
+  background-color: #ade023;
+  scale: 0.4;
 }
 
 .page2 {
@@ -385,7 +408,8 @@ video {
 .waiting h1 {
   position: absolute;
   color: black;
-  font-size: 100px;
+  font-size: 5vmax;
+  margin: 0 auto;
   -webkit-text-stroke: 1px white;
   top: 10%;
 }
@@ -399,21 +423,113 @@ video {
   position: relative;
   height: 40vh;
   width: 100%;
-  background: linear-gradient(to left bottom, #42a62e, #95c11e);
+  background: linear-gradient(to top right, #ade023, #42a62e);
   z-index: 10;
+  display: flex;
 }
-.footer #hfimg {
-  height: 100px;
+.hfimgc {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+}
+.hfimg {
+  height: 120px;
   position: absolute;
   top: 30%;
-  left: 5%;
+  left: 35%;
+  z-index: 11;
+  transition: all linear 0.2s;
 }
 #fimg {
   height: 90%;
   position: absolute;
-  left: 0%;
-  bottom: 0%;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
 }
-.hgimgc:hover #hfimg {
-  height: 70px;
+.hfimg:hover {
+  transform: scale(0.8);
+}
+
+.instap {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  background-image: url(https://www.nicepng.com/png/full/1-14885_instagram-logo-transparent-instagram-logo-vector.png);
+  background-size: cover;
+  z-index: 11;
+  transition: all linear 0.1s;
+  /* background-color: white; */
+}
+
+.instap:hover {
+  /* height: 100px; */
+  /* background-size:cover */
+  transform: scale(2);
+  background-image: url(insta2.png);
+}
+
+.f1 {
+  height: 100%;
+  width: 20%;
+  position: relative;
+}
+
+.f2 {
+  height: 100%;
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.f2 h4 {
+  color: black;
+  font-size: 2vmax;
+  line-height: 150%;
+  font-weight: 900;
+}
+.f3 {
+  height: 100%;
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: red; */
+}
+.f3 h4 {
+  color: black;
+  font-size: 2vmax;
+  line-height: 150%;
+  font-weight: 900;
+}
+.f4 {
+  height: 100%;
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: red; */
+}
+.f4 h4 {
+  color: black;
+  font-size: 2vmax;
+  line-height: 150%;
+  font-weight: 900;
+}
+.f4 h3 {
+  color: black;
+  font-size: 1vmax;
+  line-height: 150%;
+  font-weight: bold;
 }
