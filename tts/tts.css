@@ -7,6 +7,7 @@ html body {
   height: 100%;
   width: 100%;
   padding-top: 100px;
+  background-color: beige;
 }
 .incoming {
   height: 100%;
@@ -24,4 +25,7 @@ button {
   height: 50px;
   width: 100px;
   border-radius: 20%;
+}
+#speed {
+  width: 50px;
 }
