@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.container {
+  background-color: grey;
+}
+.draggable {
+  margin: 30px;
+  background-color: beige;
+  text-align: center;
+  font-size: 50px;
+  cursor: move;
+}
+.dragging {
+  background-color: darkgrey;
+}
