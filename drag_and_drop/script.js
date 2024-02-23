@@ -1,5 +1,5 @@
 const draggables = document.querySelectorAll(".draggable");
-const container = document.querySelectorAll(".container");
+const containers = document.querySelectorAll(".container");
 
 draggables.forEach((draggable) => {
   draggable.addEventListener("dragstart", () => {
@@ -11,13 +11,34 @@ draggables.forEach((draggable) => {
   });
 });
 
-container.forEach((container) => {
+containers.forEach((container) => {
   container.addEventListener("dragover", (e) => {
-    getElement = getChangeElement(container, e.clientY);
+    e.preventDefault();
+    const draggable = document.querySelector(".dragging");
+    const getElement = getChangeElement(container, e.clientY);
+    console.log(getElement);
+    if (getElement === null) {
+      container.appendChild(draggable);
+    } else {
+      container.insertBefore(draggable, getElement);
+    }
   });
 });
 
 function getChangeElement(container, y) {
-  draggableElem = [...container.querrySelectorAll(".draggable:not(.dragging)")];
-  draggableElem.reduce((prev, nov) => {}, { offset: Number.NEGATIVE_INFINITY });
+  const draggableElem = [
+    ...container.querySelectorAll(".draggable:not(.dragging)"),
+  ];
+  return draggableElem.reduce(
+    (prev, nov) => {
+      const elemRect = nov.getBoundingClientRect();
+      const offset = y - elemRect.top - elemRect.height / 2;
+      if (offset < 0 && offset > prev.offset) {
+        return { offset: offset, element: nov };
+      } else {
+        return prev;
+      }
+    },
+    { offset: Number.NEGATIVE_INFINITY }
+  ).element;
 }
